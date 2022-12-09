@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+    <title>Your Journey begins here, You are all alone in the darkness</title>
+</head>
+<body>
+
+</head>
+<body class="level-1">
+         <!--  Sound ICON in Corner  -->
+         <audio class="gamesound">
+            <source src="/static/elements/audio/Maiden.ogg" type="audio/ogg">
+        </audio>
+        <img src="/static/elements/ui/No-Sound.png" class="sound_button" onclick='GameSound()'>
+        
+        <!--  Hearts ICON in Corner  -->
+        <img src="/static/elements/ui/Full-Hearts.png" class="lives">
+
+        <!-- Introduction to the Dungeon, Posts the Name from the Start Screen to the Level1 -->
+        <section class="section-hero" id="hero">
+        <div class="text-box">
+            <h2 class="heading-secondary">
+                <span class="game-heading">Hello {{ name }}.</span>
+                <p class="game_paragraph">You find yourself walking up at the gate to the dungeon, Peering through the darkness, you see what looks to be a dark path leading to the gate portcullis of the long ruined dungeon, Looking at the area surronding the gate, you see what looks to be the remains of a campfire, a tattered tent along with human, wagon and <span class="danger-item">some peculiar tracks</span> you haven't seen before, fragments of broken wall from the <span class="poi-item">abandonded gatehouse tower</span> overlooking the entrance.</p>
+                <p class="game_paragraph">{{ name }} has come here to explore the rumours of a <span class="danger-item">monster infestation</span> for the provinces baron, however armed with only a <span class="poi-item">few rations</span>,an <span class="poi-item">old rusted shortsword</span> , <span class="poi-item">crossbow</span> and a <span class="poi-item">lamp</span> the local village gave you, This will be a <span class="danger-item">risky venture</span></p>
+                <p class="game_paragraph">Do you choose to procceed into the Entrance or run home?. You could also try climbing up the crumbling ruined tower.</p>
+            </h2>
+
+            <a href="/level-2" class="button-link"><btn class="btn btn-option">Walk through the Portcullis</btn></a>
+            <a href="ending/climb-tower" class="button-link"><btn class="btn btn-option">Climb Tower</btn></a>
+            <a href="ending/home" class="button-link"><btn class="btn btn-option">Go Home</btn></a>
+
+        </div>
+        </section>
+
+
+         <!--JQUERY Files-->
+         <script src="/static/js/audio.js"></script>
+         <script src="/staticjs/game.js"></script>
+</body>
+</html>

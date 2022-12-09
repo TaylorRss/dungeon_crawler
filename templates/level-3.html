@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+    <title>You took the Passageway to the Left</title>
+</head>
+<body>
+
+</head>
+<body class="level-1">
+         <!--  Sound ICON in Corner  -->
+         <audio class="gamesound">
+            <source src="/static/elements/audio/Maiden.ogg" type="audio/ogg">
+        </audio>
+        <img src="/static/elements/ui/No-Sound.png" class="sound_button" onclick='GameSound()'>
+        
+        <!--  Hearts ICON in Corner  -->
+        <img src="/static/elements/ui/Full-Hearts.png" class="lives">
+
+        <!-- Introduction to the Dungeon, Posts the Name from the Start Screen to the Level1 -->
+        <section class="section-hero" id="hero">
+        <div class="text-box">
+            <h2 class="heading-secondary">
+                <span class="game-heading">Hello {{ name }}.</span>
+                <p class="game_paragraph">As you start to walk down the left passageway, you hear the faint noises of <span class="danger-item">feet</span> on the hard stone, as you approach the corner you can see what looks to be a <span class="danger-item">Goblin</span></p>
+                <p class="game_paragraph">Do you choose to try to suprise attack the <span class="danger-item">Goblin</span> before it can react with your <span class="poi-item">rusted shortsword</span>?, You can also escape to be safe</p>
+            </h2>
+
+            <a href="ending/goblin.html" class="button-link"><btn class="btn btn-option">Suprise the <span class="danger-item">Goblin</span> and attack it with your <span class="poi-item">rusted shortsword</span>?</btn></a>
+            <a href="level-4.html" class="button-link"><btn class="btn btn-option">Do you run away and save your mortal life?</btn></a>
+
+        </div>
+        </section>
+
+
+         
+        <!--JQUERY Files-->
+    <script src="/static/js/audio.js"></script>
+    <script src="/staticjs/game.js"></script>
+</body>
+</html>

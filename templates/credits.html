@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+    <title>Game End Screen</title>
+</head>
+<body class="credit-screen">
+
+    <!--HERO Background with Congrats Message and saying Thanks to the User-->
+    <header>  
+       <!--  Sound ICON in Corner  -->
+       <audio class="gamesound">
+        <source src="elements/audio/ATDG.mp3" type="audio/mp3">
+    </audio>
+    <img src="elements/ui/No-Sound.png" class="sound_button" onclick='GameSound()'>
+        
+        <!--  Hearts ICON in Corner  -->
+        <img src="elements/ui/Full-Hearts.png" class="lives">
+
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main end-screen">Well Done for completing the Game</span>
+                <span class="heading-primary-sub">Huge Thanks to:</span>
+            </h1>
+
+        <ul class="end-credits"><a href="https://kenney.nl">Kenny.nl - Animals and Interface Sounds</a></ul>
+            <ul class="end-credits"><a href="https://ninjikin.itch.io/fruit">Ninjikin - Fruit Assets</a></ul>
+            <ul class="end-credits"><a href="https://ninjikin.itch.io/water">Ninjikin - Water Tileset</a></ul>
+            <ul class="end-credits"><a href="https://jordizzle.itch.io/farming-game-asset-pack-1">Jordizzle - Fruit Assets</a></ul>
+            <ul class="end-credits"><a href="https://quipinny.itch.io/pixelfood">Quipinny - Fish Assets</a></ul>
+            <ul class="end-credits"><a href="https://stealthix.itch.io/rpg-nature-tileset">Stealthix - Winter Forest Tilemap</a></ul>
+            <ul class="end-credits"><a href="https://rowdy41.itch.io/small-forest">Rowdy41 - Forest Tilemap</a></ul>
+            <ul class="end-credits"><a href="https://cauldron80.bandcamp.com/album/stronghold-the-magic-quest">Cauldron80 - Main Theme</a></ul>
+            
+            
+            
+            <p class="credit-paragraph">Without them, This Game would not at all be possible, Please check out their Itch.IO Pages</p>
+        </div>
+        
+    
+    
+</header>
+
+    
+    <!--JQUERY Files-->
+    <script src="js/audio.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

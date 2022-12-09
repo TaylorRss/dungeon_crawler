@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+    <title>Your Adventure has ended</title>
+</head>
+<body>
+
+</head>
+<body class="level-1">
+         <!--  Sound ICON in Corner  -->
+         <audio class="gamesound">
+            <source src="/static/elements/audio/Maiden.ogg" type="audio/ogg">
+        </audio>
+        <img src="/static/elements/ui/No-Sound.png" class="sound_button" onclick='GameSound()'>
+        
+        <!--  Hearts ICON in Corner  -->
+        <img src="/static/elements/ui/No-Hearts.png" class="lives">
+
+        <!-- Introduction to the Dungeon, Posts the Name from the Start Screen to the Level1 -->
+        <section class="section-hero" id="hero">
+        <div class="text-box">
+            <h2 class="heading-secondary">
+                <span class="game-heading">You have failed {{ name }}.</span>
+                <p class="game_paragraph">You went home, You couldn't summon the Courage to venture into the darkness</p>
+                <p class="game_paragraph">Will the next Adventurer be braver?.</p>
+            </h2>
+
+            <a href="/" class="button-link"><btn class="btn btn-restart">Restart</btn></a>
+        
+        </div>
+        </section>
+
+
+    <script src="js/audio.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
